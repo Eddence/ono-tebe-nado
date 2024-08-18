@@ -6,7 +6,7 @@ a {
 
 .overlay {
   position: absolute;
-  z-index: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
@@ -59,22 +59,24 @@ a {
   font-weight: 400;
   font-size: 17.9px;
   letter-spacing: 0.1px;
+  font-style: normal;
+  line-height: 135%;
 }
 
-.header__address {
+.address__decoration {
   font-style: normal;
   line-height: 135%;
   text-decoration: underline;
   text-underline-position: under;
 }
 
-.header__address_no-line {
+.address_no-line {
   text-decoration: none;
 }
 
 .cover {
   position: relative; 
-  min-height: 757px;
+  z-index: 1;
   background-image: url(../images/cover.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -83,9 +85,8 @@ a {
 
 .cover__title {
   display: flex;
-  min-width: 1000px;
-  min-height: 355px;
-  padding: 165px 50px 147px;
+  flex-direction: column;
+  padding: 165px 50px 0px;
 }
 
 .aligned-text {
@@ -97,32 +98,20 @@ a {
   text-transform: uppercase;
 }
 
-.aligned-text_position_left {
-  position: absolute;
-  z-index: 1;
-}
-
 .aligned-text_center {
-  position: absolute;
   text-align: center;
 }
 
-.aligned-text_position_center {
-  position: absolute;
-  z-index: 1;
-  padding: 127px 0 0 286px;
-}
-
-.aligned-text_position_right {
-  position: absolute;
-  top: 413px;
-  left: 635px;
-  z-index: 1;
-  padding: 0px;
+.height-text_center {
+  line-height: 140%;
 }
 
 .aligned-text_right {
-  letter-spacing: 0.6em;
+  text-align: right;
+}
+
+.height-text_right {
+  line-height: 100%;
 }
 
 .letter-spacing-extended {
@@ -135,30 +124,21 @@ a {
 
 .cover__description {
   display: flex;
-  padding-top: 313px;
+  padding-top: 145.7px;
 }
 
 .cover__description-text {
-  position: absolute;
   padding: 0 78px 62px;
   color: #fff;
   font-weight: 400;
   font-size: 22px;
-  line-height: 127%;
+  line-height: 130%;
   text-transform: uppercase;  
 }
 
-.cover__description-text-spacing_first {
-  letter-spacing: 0.9em;
+.cover_spacing-text {
+  word-spacing: 0.85em;
 }
-
-.cover__description-text-spacing_second {
-  letter-spacing: 1.1em;
-} 
-
-.cover__description-text-spacing_third {
-  letter-spacing: 0.81em;
-} 
 
 .bet-button {
   position: absolute;
@@ -215,6 +195,9 @@ a {
   z-index: 1;
   width: 334px;
   min-height: 563px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column
 }
 
 .card_type_film {
@@ -239,8 +222,6 @@ a {
 }
 
 .card__title {
-  position: relative;
-  z-index: 1;
   padding: 51px 40px;
   color: #fff;
   font-weight: 700;
@@ -257,28 +238,12 @@ a {
 }
 
 .card__text {
-  position: relative;
-  z-index: 1;
   color: #fff;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
-}
-
-.card__text-spacing {
-  letter-spacing: 0.7em;
-}
-
-.card__text-film {
-  padding: 190px 40px 48px;
-}
-
-.card__text-book {
-  padding: 0 40px 46px;
-}
-
-.card__text-picture {
-  padding: 42px 40px 48px;
+  padding: 0px 40px 48px;
+  letter-spacing: 0.003em;
 }
 
 .lots__look-more-link {
@@ -293,7 +258,7 @@ a {
 .about {
   display: grid;
   grid-template-columns: 1fr 693px;
-  margin: 146px 24px 0px 0px;
+  margin: 145px 25px 0px 0px;
 }
 
 .about__logo {
@@ -329,18 +294,6 @@ a {
   letter-spacing: 0.003em;
 }
 
-.about__text-spacing-first {
-  letter-spacing: 0.2em;
-}
-
-.about__text-spacing-second {
-  letter-spacing: -0.1em;
-}
-
-.about__text-spacing-third {
-  letter-spacing: 0.01em;
-}
-
 .about__logo-image {
   width: 148px;
   height: 114px;
@@ -351,7 +304,6 @@ a {
   justify-content: space-between;
   padding: 180px 50px 80px;
 }
-
 
 .footer__address {
   font-weight: 400;
@@ -371,7 +323,7 @@ a {
 }
 
 .footer__menu {
-  padding-left: 40px;
+  padding-right: 23px;
   text-align: center;
 }
 

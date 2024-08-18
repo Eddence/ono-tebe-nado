@@ -54,9 +54,9 @@
   margin-right: 61px;
   font-weight: 400;
   font-size: 17.9px;
-  letter-spacing: 0.1px;
   font-style: normal;
   line-height: 135%;
+  letter-spacing: 0.1px;
 }
 
 .address__decoration {
@@ -189,11 +189,11 @@
 .card {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 334px;
   min-height: 563px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
   background-repeat: no-repeat;
   background-position: center;
   background-size:cover;
@@ -225,13 +225,13 @@
 
 
 .card__text {
+  height: 100%;
+  padding: 0px 40px 48px;
   color: #fff;
   font-weight: 400;
   font-size: 20px;
   line-height: 120%;
-  padding: 0px 40px 48px;
   letter-spacing: 0.003em;
-  height: 100%;
 }
 
 .lots__look-more-link {
